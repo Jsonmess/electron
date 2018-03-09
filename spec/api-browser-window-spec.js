@@ -1542,7 +1542,7 @@ describe('BrowserWindow module', () => {
 
       it('validate process.env access in sandbox renderer', (done) => {
         ipcMain.once('answer', function (event, test) {
-          assert.equal(test, { main: 'foo', renderer: 'renderer' })
+          assert.equal(test, 'foo')
           done()
         })
         process.env.main = 'foo'

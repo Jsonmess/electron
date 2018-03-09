@@ -8,9 +8,7 @@
     window.test = 'preload'
     window.process = process
     if (process.env.main) {
-      process.env.renderer = 'renderer'
-      window.test = { main: process.env.main,
-                      renderer: process.env.renderer }
+      window.test = process.env.main
     }
   } else if (location.href !== 'about:blank') {
     addEventListener('DOMContentLoaded', () => {
